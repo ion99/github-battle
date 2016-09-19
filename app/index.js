@@ -15,7 +15,7 @@ var sentryURL = 'https://' + sentryKey + '@sentry.io/' + sentryApp;
 
 Raven.config(sentryURL).install();
 
-console.log(window.thing.doesNotExist);
+
 
 // var ProfilePic = React.createClass({
 //   render: function(){

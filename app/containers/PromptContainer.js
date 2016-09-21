@@ -4,23 +4,20 @@ var Prompt = require('../components/Prompt');
 var PromptContainer = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
-  }
+  },
   getInitialState: function(){
     return {
       username: ""
     }
   },
-  handleUpdateUser: function(e){
-    this.setState({
-      username: e.target.value;
-    })
-  },
   handleSubmitUser: function(e){
     e.preventDefault();
     var username = this.state.username;
     this.setState({
-      username: "";
-    })
+      username: ""
+    });
+
+
     if (this.props.routeParams.playerOne){
       console.log("111", this.context);
       this.context.router.push({
@@ -36,6 +33,11 @@ var PromptContainer = React.createClass({
       this.context.router.push('/playerTwo/' + this.state.username);
       //go to playerTwo
     }
+  },
+  handleUpdateUser: function(event){
+    this.setState({
+      username: event.target.value
+    })
   },
   render: function(){
     // console.log(this);

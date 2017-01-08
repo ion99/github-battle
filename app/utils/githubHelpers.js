@@ -57,7 +57,7 @@ var helpers = {
     })
   },
 
-  buttle: function(players){
+  battle: function(players){
     var playerOneData = getPlayersData(players[0]);
     var playerTwoData = getPlayersData(players[1]);
 

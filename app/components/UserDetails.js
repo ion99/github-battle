@@ -19,7 +19,7 @@ function UserDetails(user){
 }
 
 UserDetails.propTypes = {
-  score: PropTypes.number.isRequired,
+  score: PropTypes.number,
   info: PropTypes.shape({
     avatar_url: PropTypes.string.isRequired,
     blog: PropTypes.string,
